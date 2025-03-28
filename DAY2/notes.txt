@@ -1,0 +1,154 @@
+1. Create and Activate a Virtual Environment
+asus@LAPTOP-TSFKBO1A MINGW64 /
+$ python -m venv ~/profile
+This creates a virtual environment named profile in the home directory.
+
+asus@LAPTOP-TSFKBO1A MINGW64 /
+$ source ~/profile/scripts/activate {profile}
+Activates the virtual environment.
+
+The prompt now shows (profile), indicating the virtual environment is active.
+
+
+
+2. Verify Python and Pip Installation
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 /
+$ pwd
+/
+Prints the current directory (/).
+
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 /
+$ python -m pip list
+Lists installed packages:
+
+pgsql
+Copy
+Edit
+Package    Version
+---------- -------
+pip        24.0
+setuptools 65.5.0
+A notice appears indicating that pip has an update available.
+
+
+
+3. Install FastAPI and Dependencies
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 /
+$ python -m pip install "fastapi[standard]"
+Installs FastAPI along with required dependencies.
+
+
+
+4. Set Up the Project Directory
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 /
+$ cd ~
+Moves to the home directory (~).
+
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~ (main)
+$ cd projects/
+Navigates to the projects directory.
+
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects (main)
+$ mkdir profile
+Creates a new project directory named profile.
+
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects (main)
+$ cd profile/
+Moves into the profile project directory.
+
+
+
+5. Create and Code app.py
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ ls ~/projects/profile
+Lists the contents of the profile directory (empty at this point).
+
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ touch app.py
+Creates a new Python file named app.py.
+
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ ls ~/projects/profile
+app.py
+Confirms that app.py has been created in the profile directory.
+
+
+
+6. Run the FastAPI Development Server
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ fastapi dev app.py 
+Attempts to start the FastAPI development server.
+
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ export PYTHONUTF8=1
+Sets the UTF-8 encoding environment variable to avoid encoding issues.
+
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ fastapi dev app.py 
+Restarts the FastAPI development server.
+
+
+
+7. Download and Extract the Portfolio Template
+Download the portfolio template from:
+iPortfolio Bootstrap Template
+
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ cd ~
+Returns to the home directory.
+
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~ (main)
+$ cd Downloads
+Navigates to the Downloads folder.
+
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/Downloads (main)
+$ cd iPortfolio
+Moves into the extracted template directory (iPortfolio).
+
+
+
+8. Copy Template Files to the FastAPI Project
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/Downloads/iPortfolio (main)
+$ cp index.html ~/projects/profile/templates
+Copies index.html into the templates folder of the FastAPI project.
+
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/Downloads/iPortfolio (main)
+$ cp -R assets/* ~/projects/profile/assets
+Copies all assets (CSS, JS, images, etc.) into the assets profile project directory.
+
+
+
+9. Final Steps and Running the Server Again
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/Downloads/iPortfolio (main)
+$ cd ~
+Returns to the home directory.
+
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~ (main)
+$ cd projects/profile
+Moves back to the FastAPI project directory.
+
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ fastapi dev app.py
+Starts the FastAPI development server again.
+

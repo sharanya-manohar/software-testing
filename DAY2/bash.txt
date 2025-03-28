@@ -1,0 +1,79 @@
+asus@LAPTOP-TSFKBO1A MINGW64 /
+$ python -m venv ~/profile
+asus@LAPTOP-TSFKBO1A MINGW64 /
+$ source ~/profile/scripts/activate {profile}
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 /
+$ pwd
+/
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 /
+$ python -m pip list
+Package    Version
+---------- -------
+pip        24.0
+setuptools 65.5.0
+
+[notice] A new release of pip is available: 24.0 -> 25.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 /
+$ python -m pip install "fastapi[standard]"
+asus@LAPTOP-TSFKBO1A MINGW64 /
+$ cd ~
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~ (main)
+$ cd projects/
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects (main)
+$ mkdir profile
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects (main)
+$ cd profile/
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ ls ~/projects/profile
+(profile)
+
+create and code app.py in ~/projects/profile
+
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ ls ~/projects/profile
+app.py
+(profile)asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main) 
+$ fastapi dev app.py 
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ export PYTHONUTF8=1
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ fastapi dev app.py 
+
+download from this website "https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/#download" for free
+extract the zipfile
+
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ cd ~
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~ (main)
+$ cd Downloads
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/Downloads (main)
+$ cd iPortfolio
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/Downloads/iPortfolio (main)
+$ cp index.html ~/projects/profile/templates
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/Downloads/iPortfolio (main)
+$ cp -R assets/* ~/projects/profile/assets
+(profile) 
+asus@LAPTOP-TSFKBO1A MINGW64 ~/Downloads/iPortfolio (main)
+$ cd ~
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~ (main)
+$ cd projects/profile
+(profile)
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ fastapi dev app.py
+
+
+
