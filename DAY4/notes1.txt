@@ -1,0 +1,39 @@
+1)Activate the virtual environment-
+source ~/profile/scripts/activate {profile}
+
+2)navigate to the project(profiles) directory which is already created and pushed to the remote GitHub repository
+cd ~/projects/profile
+
+3)add requirements.txt and test_main.py to profiles directory
+
+4) give the command
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+pip install -r requirements.txt
+this will run all requirements
+
+5)the the command
+asus@LAPTOP-TSFKBO1A MINGW64 ~/projects/profile (main)
+$ pytest test_main.py
+this will test the file
+
+-->you might get some errors so use the following commands:
+pip install --upgrade fastapi
+pip install httpx
+
+then repeat step 5 again
+pytest test_main.py
+
+6)then
+git add .
+git commit -m "added requirements.txt and test_main.py"
+git push
+
+7) add a main.yml file in the .gitHub\workflows dir
+
+8)then again
+git add .
+git commit -m "added yml file"
+git push
+
+9)go to Actions in the git repository
+all the workflows will be displayed
