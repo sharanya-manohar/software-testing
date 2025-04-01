@@ -1,0 +1,74 @@
+Setting Up a Git Repository and Deploying a FastAPI Project on Render
+
+1. Create a New Git Repository
+Do not add a README file initially.
+Copy and execute the following commands to initialize the repository and make the first commit:
+
+echo "# new" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/sharanya-manohar/new.git
+git push -u origin main
+
+
+2. Activate the Virtual Environment
+Ensure the virtual environment is activated before proceeding:
+
+source ~/profile/scripts/activate {profile}
+
+
+3. Navigate to the Project Directory
+Move into the project directory where all project files are stored:
+
+cd ~/projects/profile
+
+
+4. Add All Files to the Staging Area
+Stage all files in the profile directory to prepare them for commit:
+
+git add .
+
+
+5. Commit the Changes
+Save the staged changes in the local repository:
+
+git commit -m "adding project to remote repo"
+
+
+6. Push Changes to the Remote Repository
+Upload the committed changes to GitHub:
+
+git push -u origin main
+Alternatively, use:
+git push
+
+
+7. Set Up Deployment on Render
+Open Render.
+Click Get Started and sign in using GitHub.
+Grant permission only for selected repositories and select the one containing the project.
+
+
+8. Configure the Web Service
+Navigate to Web Services.
+Choose Git Provider and select the appropriate repository.
+
+
+9. Deployment Configuration
+On the next page, configure the following settings:
+Language: Python 3
+
+Build Command:
+pip install fastapi "uvicorn[standard]"
+
+Start Command:
+uvicorn app:app --host 0.0.0.0 --port $PORT
+
+Select the Free plan and click Deploy Web Service.
+
+
+10. Access the Deployed Project
+Once deployment is successful, a link will be provided below the profile.
+This is the live URL for the deployed FastAPI project.

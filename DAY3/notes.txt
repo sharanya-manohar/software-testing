@@ -1,0 +1,42 @@
+1)create a new git repository - do not add readme file yet
+copy the given codes
+echo "# new" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/sharanya-manohar/new.git
+git push -u origin main
+
+2)Activate the virtual environment-
+source ~/profile/scripts/activate {profile}
+
+3)navigate to the project(profiles) directory
+cd ~/projects/profile
+
+4)all all the files in profile directory to the staging area
+git add .
+
+5) commit these changes
+git commit -m "adding project to remote repo"
+
+6) push changes to the remote repo using
+git push -u origin main
+or git push
+
+7)open render.com
+get started using GitHub (enter passwords and stuff)
+for GitHub give permission only for selected repos - and select the one you have to deploy
+
+8) go to webservices
+git provider
+select the repo
+
+9)in next page-
+language- python3
+build command- pip install fastapi "uvicorn[standard]"
+start command- uvicorn app:app --host 0.0.0.0 --port $PORT
+select free and
+deploy web service
+
+10)after web service is successfully deployed you will get a link below your profile that is your deployed project
