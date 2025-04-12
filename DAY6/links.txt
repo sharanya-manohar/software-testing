@@ -1,0 +1,5 @@
+Portfolio repo:
+	https://github.com/sharanya-manohar/portfolio
+
+Portfolio website:
+	https://portfolio-3-09oh.onrender.com
