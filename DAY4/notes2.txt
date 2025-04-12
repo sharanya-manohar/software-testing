@@ -1,0 +1,29 @@
+1) Deploy project on render
+
+2) in git bash- deactivate any active environment
+first cd (because environment file is in main dir)
+then deactivate
+
+3) create a dir test_automation, create an environment in it and activate it
+mkdir test_automation
+python -m venv ~/test_automation
+source ~/test_automation/scripts/activate {test_automation}
+
+4) install selenium
+(test_automation)
+asus@LAPTOP-TSFKBO1A MINGW64 ~ (main)
+$ python -m pip install selenium
+
+5) open python interpreter in bash
+(test_automation)
+asus@LAPTOP-TSFKBO1A MINGW64 ~ (main)
+$ python -i
+
+6)  open qxf2.com/selenium-tutorial-main usin the webdriver
+driver = webdriver.Chrome()
+ driver.get("https://qxf2.com/selenium-tutorial-main")
+ name = driver.find_element(by="id", value="name")
+ name.send_keys("Qxf2 services")
+
+7) add css and xpath extension to chrome 
+and use it to get css selector by id
